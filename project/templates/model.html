@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<html>
+
+  <head>
+    <title>{{title}}</title>
+
+  </head>
+
+  <body>
+
+    <h1> {{cluster}}: Prediction Model and Insights </h1>
+    
+    <div>
+    <p> {{desc}} </p>
+    <p> {{model}} </p>
+    </div>
+
+    <div>
+    <figure>
+    <img src= {{ url_for('static', filename = 'corr_weight.jpg') }} width="500" height="500" alt="previous" title="Previous" border="0">
+    </figure>
+    </div>
+
+  </body>
+</html>

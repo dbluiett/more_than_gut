@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>{{title}}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename = 'cover2.css')}}" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Predict a Point</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li><a href="/home">Home</a></li>
+                  <li><a href="/dashboard">Dashboard</a></li>
+                  <li class="active"><a href="/point">Predict</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <form action="/predict" method='POST' >
+            <input type="submit" value ="Pick a Point"  style="height:50px; width:200px">
+            </form>
+            <br>
+            <br>
+          </div>
+
+          <div class="inner cover">
+            <form action="/predict2" method='POST' >
+            Customer<br>
+            Age
+            <input type="text" name="age" STYLE = "color:#72A4D2"/>
+              Marital Status
+              <select name="marital">
+              <option value="single">Single</option>
+              <option value="married">Married</option>
+              <option value="divorced">Divorced</option>
+              </select>
+              <br>
+              Highest Education Obtained
+              <select name="education">
+              <option value="some_college">Some College</option>
+              <option value="university.degree">Bachelor Degree or Higher</option>
+              <option value="high.school">Other</option>
+              </select>
+              Job
+              <select name="job">
+              <option value="student">Student</option>
+              <option value="blue-collar">Blue Collar</option>
+              <option value="admin">Admin</option>
+              <option value="services">Service Industry</option>
+              <option value="retired">Retired</option>
+              <option value="other">Other</option>
+              </select>
+            <br>
+            <br>Previous Marketing Campaigns <br>
+              Outcome
+              <select name="p_outcome">
+              <option value="failure">Failure</option>
+              <option value="success">Sucess</option>
+              <option value="nonexistent">N/A</option>
+              </select>
+             <br>
+            <br>This Marketing Campaign <br>
+            # of Times Contacted
+            <input type="text" name="campaign" STYLE = "color:#72A4D2" />
+            Duration(sec.)
+            <input type="text" name="duration" STYLE = "color:#72A4D2" /> <br>
+            Days since Last Contact
+            <input type="text" name="p_days" STYLE = "color:#72A4D2" />
+             Month
+            <input type="text" name="month" STYLE = "color:#72A4D2" maxlength="3" />
+            <input type="submit" value="Submit">
+            </form>
+          </div>
+
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>More than Gut!, by <a href="https://www.linkedin.com/in/deseanaebluiett">@deseanae</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
