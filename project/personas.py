@@ -1,11 +1,11 @@
+import matplotlib
+matplotlib.use('Agg')
 import pandas as pd 
 import numpy as np 
 from customer_preds import P0, P1, P2, P3
 import matplotlib.pyplot as plt 
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
-import matplotlib
-matplotlib.use('Agg')
 import StringIO
 
 # My functions 
