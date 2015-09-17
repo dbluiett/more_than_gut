@@ -122,20 +122,12 @@ def predict2():
     cluster, prediction, actual = fake_point(point_df)
     return render_template('predict_template.html', title = TITLE, cluster = cluster, prediction=prediction, actual = actual)
 
-@app.route('/test', methods=["GET"])
-def test():
-    cluster = "John"
-    weights = Feature_corr_dict[cluster]
-    png_output= Plot_feature_weights(weights)
-    response= make_response(png_output.getvalue())
-    response.headers['Content-Type'] = 'image/png'
-    return response
 
 @app.route('/description', methods =["GET","POST"])
 def description():
     cluster = request.form["persona_name"]
     weights = Feature_corr_dict[cluster]
-    png_output= Plot_feature_weights(weights)
+    Plot_feature_weights(weights)
     desc = persona_dict[cluster]
     model = model_txt_dict[cluster]
     return render_template('insight.html', title = TITLE, cluster = cluster, desc = desc, model = model)

@@ -8,17 +8,13 @@ import StringIO
 
 # My functions 
 def Plot_feature_weights(feature_corr):
-    fig, axes = plt.subplots(nrows=1, ncols=1)
+    #fig, axes = plt.subplots(nrows=1, ncols=1)
     if "target" in feature_corr.index:
         feature_corr.drop("target", inplace = True)
-    feature_corr.plot(kind = "barh",ax=plt.gca(), grid = False, fontsize=8)
+    feature_corr.plot(kind = "barh", grid = False, fontsize=8)
     plt.gcf().subplots_adjust(left=.2)
     plt.savefig("static/corr_weight.jpg")
-    #import pdb; pdb.set_trace()
-    canvas=FigureCanvas(fig)
-    png_output = StringIO.StringIO()
-    canvas.print_png(png_output)
-    return png_output
+    return
 
 #Calculate feature correlation to target
 Jim_corr = P0.corrwith(P0.target, axis=0)
