@@ -10,7 +10,9 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title>{{title}}</title>
-
+        {% for s in css %}
+    <link href={{ url_for('static', filename=s) }} rel="stylesheet" media="screen">
+    {% endfor %}
     <!-- Bootstrap core CSS -->
     <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
 
@@ -32,33 +34,37 @@
           <div class="masthead clearfix">
             <div class="inner">
 
-              <h3 class="masthead-brand">Predict a Point</h3>
+              <h3 class="masthead-brand"><font face ="verdana">Customer Segments Dashboard</font></h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li><a href="/home">Home</a></li>
-                  <li class="active"><a href="/dashboard">Dashboard</a></li>
-                  <li><a href="/point">Predict</a></li>
+                  <li><a href="/home"><font color=#008B8B>Home</font></a></li>
+                  <li class="active"><a href="/dashboard"><font color=#008B8B>Dashboard</font></a></li>
+                  <li><a href="/point"><font color=#008B8B>Predict</font></a></li>
                 </ul> 
               </nav>
             </div>
           </div>
 
           <div class="inner cover">
-            <h1> Customer Personas Dashboard </h1>
+            <br><br>
             <div class ="container">
+              <br>
+              <font face="verdana" color=#008B8B>(Type in a Persona to learn more)</font>
             <form action="/description" method='POST' >
             <input type="text" name="persona_name" STYLE = "color:#72A4D2" />
             <input type="submit" value ="insights"/>
             </form>
-            </div>
-            <div class ="container"> 
-            <img src= {{ url_for('static', filename = 'population_cluster2.png') }} width="300" height="200" align = "left" border="0">
 
-            <img src= {{ url_for('static', filename = 'summary_chart.png') }} width="500" height="200" border="0">
+            </div><br><br>
+            <div class ="container"> 
+              <img src= {{ url_for('static', filename = 'summary_chart.png') }} width="500" height="200" border="0" align ="center">
+
             </div>
+    
+            <img src= {{ url_for('static', filename = 'population_cluster2.png') }} width="400" height="250" border="0" align = "middle">
 
             {% for s in base_scripts %}
-            <script src={{ url_for('static', filename=s) }}></script>
+              <script src={{ url_for('static', filename=s) }}></script>
             {% endfor %}
             <div id="navbarid"></div>
 
@@ -73,7 +79,7 @@
 
           <div class="mastfoot">
             <div class="inner">
-              <p>Home Page for More than Gut!, by <a href="https://www.linkedin.com/in/deseanaebluiett">@deseanae</a>.</p>
+              <p align="left"><a href="https://www.linkedin.com/in/deseanaebluiett"><font color=#008B8B>@deseanae</font></a>.</p>
             </div>
           </div>
 

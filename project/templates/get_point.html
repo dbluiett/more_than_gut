@@ -12,7 +12,7 @@
     <title>{{title}}</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="{{ url_for('static', filename = 'cover2.css')}}" rel="stylesheet">
@@ -29,20 +29,26 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Predict a Point</h3>
+              <h1 class="masthead-brand"><font face="verdana">Predict a Point</font></h1>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li><a href="/home">Home</a></li>
-                  <li><a href="/dashboard">Dashboard</a></li>
-                  <li class="active"><a href="/point">Predict</a></li>
+                  <li><a href="/home"><font color=#008B8B>Home</font></a></li>
+                  <li><a href="/dashboard"><font color=#008B8B>Dashboard</font></a></li>
+                  <li class="active"><a href="/point"><font color=#008B8B>Predict</font></a></li>
                 </ul>
               </nav>
             </div>
           </div>
 
+          <font face ="verdana" color=#008B8B>
           <div class="inner cover">
+            
             <form action="/predict" method='POST' >
+              <fieldset>
+                <legend>Option A: Select a Customer from the database</legend>
+                <br>
             <input type="submit" value ="Pick a Point"  style="height:50px; width:200px">
+            </fieldset>
             </form>
             <br>
             <br>
@@ -50,6 +56,8 @@
 
           <div class="inner cover">
             <form action="/predict2" method='POST' >
+            <fieldset>
+              <legend>Option B: Create A New Customer</legend>
             Customer<br>
             Age
             <input type="text" name="age" STYLE = "color:#72A4D2"/>
@@ -94,16 +102,17 @@
              Month
             <input type="text" name="month" STYLE = "color:#72A4D2" maxlength="3" />
             <input type="submit" value="Submit">
+            </fieldset>
             </form>
           </div>
 
 
           <div class="mastfoot">
             <div class="inner">
-              <p>More than Gut!, by <a href="https://www.linkedin.com/in/deseanaebluiett">@deseanae</a>.</p>
+              <p><a href="https://www.linkedin.com/in/deseanaebluiett"><font color = #008B8B>@deseanae </font></a>.</p>
             </div>
           </div>
-
+        </font>
         </div>
 
       </div>

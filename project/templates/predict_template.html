@@ -12,7 +12,7 @@
     <title>{{title}}</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="{{ url_for('static', filename = 'cover2.css')}}" rel="stylesheet">
@@ -29,27 +29,27 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Predict a Point</h3>
+              <h1 class="masthead-brand"><font face="verdana">Predict a Point</font></h1>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li><a href="/home">Home</a></li>
-                  <li><a href="/dashboard">Dashboard</a></li>
-                  <li class="active"><a href="/point">Predict</a></li>
+                  <li><a href="/home"><font color=#008B8B>Home</font></a></li>
+                  <li><a href="/dashboard"><font color=#008B8B>Dashboard</font></a></li>
+                  <li class="active"><a href="/point"><font color=#008B8B>Predict</font></a></li>
                 </ul>
               </nav>
             </div>
           </div>
 
           <div class="inner cover">
-            <h1 class="cover-heading">More than Guts</h1>
-            <p class="lead">Prediction</p>
-            <p> Persona: {{cluster}}, Prediction: {{prediction}}, Actual: {{actual}}
+            <h1 class="cover-heading"><font face="verdana" color=#008B8B>More than Guts</font></h1>
+            <p class="lead"><font face="verdana" color=#008B8B>Prediction</font></p>
+            <p> <font face="verdana" color=#008B8B>Persona: {{cluster}}, Prediction: {{prediction}}, Actual: {{actual}}</font>
             </p>
           </div>
 
           <div class="mastfoot">
             <div class="inner">
-              <p>Home Page for More than Gut!, by <a href="https://www.linkedin.com/in/deseanaebluiett">@deseanae</a>.</p>
+              <p><a href="https://www.linkedin.com/in/deseanaebluiett"><font color=#008B8B>@deseanae</font></a>.</p>
             </div>
           </div>
 

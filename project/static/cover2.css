@@ -27,12 +27,10 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: rgba(32,178,170,1);
-  background-image: url('./background3.png');
+  background-image: url('./background4.png');
   background-size: cover;
 }
 body {
-  color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
@@ -57,9 +55,13 @@ body {
 
 /* Padding for spacing */
 .inner {
+
   padding: 30px;
 }
-
+.text_box{
+  border:25px #008B8B;
+  margin:25px;
+}
 .vertical-align {
     display: flex;
     align-items: middle;
