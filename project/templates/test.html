@@ -45,32 +45,31 @@
             </div>
           </div>
 
-          <div class="inner cover">
+          <div class="main_body">
             <br><br>
-            <div class ="container">
-              <br>
-              <font face="verdana" color=#008B8B>(Type in a Persona to learn more)</font>
+          
+            <font face="verdana" color=#008B8B>(Type in a Persona to learn more)</font>
             <form action="/description" method='POST' >
             <input type="text" name="persona_name" STYLE = "color:#72A4D2" />
             <input type="submit" value ="insights"/>
             </form>
 
-            </div><br><br>
-            <div class ="container"> 
-              <img src= {{ url_for('static', filename = 'summary_chart.png') }} width="500" height="200" border="0" align ="center">
+            <br><br>
 
-            </div>
-    
-            <img src= {{ url_for('static', filename = 'population_cluster2.png') }} width="400" height="250" border="0" align = "middle">
-
+            <img src= {{ url_for('static', filename = 'summary_chart.png') }} width="500" height="200" border="0" align ="center">
+            <br><br>
+            
+            <img src= {{ url_for('static', filename = 'population_cluster2.png') }} width="350" height="200" border="0" align = "middle">
+            <br><br>
+            
             {% for s in base_scripts %}
               <script src={{ url_for('static', filename=s) }}></script>
             {% endfor %}
             <div id="navbarid"></div>
 
-            <div class="container">
-                  <div id="component_id"></div>
-            </div>
+            
+            <div id="component_id"></div>
+        
 
             {% for s in page_scripts %}
             <script src={{ url_for('static', filename=s) }}></script>
